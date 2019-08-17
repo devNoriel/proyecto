@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div class="container animated fadeIn">
+<div class="card-header">
+<h3 class="center"><b>Iniciar sesión</b></h3>
+</div>
+  <div class="card">
+  <div class="row">
+      <form class="col s12 size" #formLogin="ngForm" (submit)="logIn()">
+        <div class="row">
+            <div class="input-field col s12">
+                <input [(ngModel)]="email" id="email" type="email" class="validate" name="email" required>
+                <label for="email">Correo electrónico</label>
+              </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input [(ngModel)]="password" name="password" id="password" type="password" class="validate" required>
+                <label for="password">Contraseña</label>
+              </div>
+        </div>
+        <button mat-raised-button type="submit" color="primary">Enviar</button>
+        <br><br>
+        <a routerLink="/registro">¿No tienes una cuenta? Regístrate aquí</a>
+      </form>
+    </div>
+  </div>
+</div>

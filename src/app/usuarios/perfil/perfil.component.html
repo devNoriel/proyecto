@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+              <div class="card-title">
+              <h4 class="center">Bienvenido</h4>
+            </div>
+              <p>Usuario: {{user.email}}</p>
+          </div>
+            </div>
+            <div class="col s12 m8">
+            <div class="card">
+                    <h4 class="center">Historial de autos alquilados</h4>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Días</th>
+                            <th scope="col">Sucursal de Recogida</th>
+                            <th scope="col">Sucursal de Devolución</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let dato of datos; index as i">
+                                <th scope="row">{{i+1}}</th>
+                                <td>{{dato.modelo}}</td>
+                                <td>{{dato.dias}}</td>
+                                <td>{{dato.sucursalRecogida}}</td>
+                                <td>{{dato.sucursalDevolucion}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+            </div>
+    </div>
+</div>

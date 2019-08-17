@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <a class="title" routerLink=''>OMEGA SECTOR</a>
+
+        <span class="example-spacer"></span>
+
+        <button mat-button class="sub example-icon" routerLink="/autos">Autos</button>
+        <button mat-button class="sub example-icon" *ngIf="!isLogged" routerLink="/registro">Registrarse</button>
+        <button mat-button class="sub example-icon" *ngIf="!isLogged" routerLink="/login">Iniciar sesión</button>
+        
+        <button mat-button class="sub example-icon" *ngIf="isLogged" routerLink="/alquiler">Alquilar</button>
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon *ngIf="isLogged" class="example-icon" aria-hidden="false">account_circle</mat-icon></button>
+            <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/perfil">Perfil</button>
+        <button mat-menu-item (click)="logOut()">Cerrar sesión</button>
+            </mat-menu> 
+        </mat-toolbar-row>
+</mat-toolbar>

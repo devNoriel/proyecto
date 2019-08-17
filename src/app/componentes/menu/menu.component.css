@@ -1,0 +1,19 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+.title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  text-shadow: 3px 0px 3px black;
+}
+.sub{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  text-shadow: 3px 0px 3px black;
+}
+a{
+  color: white;
+}
