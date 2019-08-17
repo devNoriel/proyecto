@@ -26,9 +26,9 @@ calculo(){
   ngOnInit() {
   }
   guardarRegistro(alquilerForm: NgForm): void{
+    if(alquilerForm !=null && ""){
     this.dataApiService.addAlquilados(alquilerForm.value);
     alert('Se han enviado los datos');
-    if(alquilerForm !=null && ""){
     }else{
     alert('Debe completar todos los campos');
     }
