@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../servicios/auth.service';
 import { Router } from '@angular/router';
-import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-registro',
@@ -10,7 +9,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router, private fireStorage: AngularFireStorageModule) { }
+  constructor(private authService: AuthService, private router: Router) { }
   public email: string = '';
   public password: string = '';
   ngOnInit() {
